@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-def contact(request):
-    return HttpResponse("This is c cantact page")
+
+from django.shortcuts import render 
+
 def home(request):
-    return HttpResponse("This is home page")
+    return render(request ,"home.html")

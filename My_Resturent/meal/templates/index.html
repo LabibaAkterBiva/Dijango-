@@ -1,0 +1,22 @@
+{%extends 'base.html' %}
+{%load static%}
+{%block content%}
+<link rel="stylesheet" href="{% static 'meal/css/index.css' %}">
+<div class="parent_div d-flex flex-wrap p-5">  <!-- Added flex-wrap to handle multiple cards -->
+  {% for i in data.categories %}
+  <div class="card m-2" style="width: 18rem;">  <!-- Added margin to cards for spacing -->
+      <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="image">
+      <div class="card-body">
+        <h5 class="card-title">{{i.idCategory}}</h5>
+        <h5 class="card-title">{{i.strCategory}}</h5>  <!-- Corrected to use card-title class -->
+        <p class="card-text">{{ i.strCategoryDescription | truncatewords:10 }}</p>
+        <a href="#" class="btn  bg-black text-bg-dark px-5 p">Order Now</a>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+{%endblock%}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

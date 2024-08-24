@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-def courses(request):
-    return HttpResponse("This is courses page")
+
+def about(request):
+    return render(request, "first_app/about.html")
+def contact(request):
+    return render(request, "first_app/contact.html")
 
 # Create your views here.

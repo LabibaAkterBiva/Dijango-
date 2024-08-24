@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>hello</h1>
+    {% if age > 20 %}
+        <h1>You are a driver</h1>
+    {% elif age > 10 and age <= 20 %}
+        <h1>You're a teenager</h1>
+    {% else %}
+        <h1>You are nobody</h1>
+    {% endif %}
+
+    {%for i in courses %}
+    <h3>{{i.instructor}}</h3>
+
+    {% endfor %}
+   <h1>{{ lst | join:" - " }}</h1> 
+  <h2>{{ birthday | date:"D d M Y" }}</h2>
+  <h2>{{ val | add:"5" }}</h2>
+ <h3>{{val | add:"[4, 5, 6]"}}</h3> 
+ <h2>{{v|cut:"-"}}</h2>
+ <h2>{{lst| first}}</h2>
+ <h2>{{ v  | linenumbers }}</h2>
+ {{ birthday | time:"H:i" }}
+ 
+ <h2>
+ {{lst| length }}
+ </h2>
+ <h3>{{"Better days ahead!" | truncatewords:2}}</h3>
+ {{ courses | wordcount }}
+ cd
+
+</body>
+</html>
+
+

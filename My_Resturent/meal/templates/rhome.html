@@ -1,0 +1,20 @@
+
+{%extends 'base.html'%} {%load static%} {%block content%}
+<link rel="stylesheet" href="{% static 'meal/css/rhome.css' %}">
+<div class="row p-5">
+  <div class="box1 p-5 col-lg-6">
+    <div class="Banner-left">
+      <h1 class="title">Make Your Order Now</h1>
+      <p class="discription">
+        We always ready to help You.Keep attach with us.
+      </p>
+      <button class="ap-btn">Order</button>
+      <button class="doc-btn">Food-menu</button>
+    </div>
+  </div>
+  <div class="p-5 col-lg-6">
+    <img class="w-50" src="{%static 'images/image2.jpeg'%}" alt="resturent image" />
+  </div>
+</div>
+
+{%endblock%}

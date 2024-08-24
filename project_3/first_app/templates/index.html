@@ -1,0 +1,34 @@
+
+{%extends 'base.html'%}
+{%block content%}
+{{block.super}}
+{%load static %}
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for i in data%}
+          <tr>
+            <th scope="row">{{i.userId}}</th>
+            <td>{{i.id}}.</td>
+            <td>{{i.title}}</td>
+            <td>{{i.body}}</td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    <h1> I am inside first_app</h1>
+    <img class="" src="{% static 'images/image2.jpeg'%}" alt="Bird image"/>
+    
+{%endblock%}
+    
+    {% comment %} java scrpt {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    

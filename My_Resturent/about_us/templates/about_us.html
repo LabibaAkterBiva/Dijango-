@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<link rel="stylesheet" href="{% static 'about_us/css/about_us.css' %}">
+<h1>Thanks for visiting us</h1>
+<section class="about-section">
+    <div class="about-text">
+        <h2>About Us</h2>
+        <h1>Andy Chef Restaurant</h1>
+        <p>The dailies? You know – milk, bread, eggs – the dailies. These are the things you eat that you find yourself running out each week (or each day) to purchase.</p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="about-image">
+        <img src="{%static 'about_us/images/images.jpeg'%}" alt="Chef with Dish">
+    </div>
+</section>
+
+{%endblock%}
+
